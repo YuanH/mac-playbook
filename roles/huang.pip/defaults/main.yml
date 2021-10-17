@@ -1,0 +1,15 @@
+---
+# defaults file for huang.pip
+# For Python 3, use python3-pip.
+pip_package: python3-pip
+pip_executable: pip3 #"{{ 'pip3' if pip_package.startswith('python3') else 'pip' }}"
+
+pip_install_packages: 
+  - name: yfinance
+    state: latest
+  - name: pandas
+    state: latest
+  - name: numpy
+    state: latest
+  - name: boto3
+    state: latest
