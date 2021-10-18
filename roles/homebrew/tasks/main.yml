@@ -107,14 +107,21 @@
     - name: Ensure blacklisted cask applications are not installed.
       homebrew_cask: "name={{ item }} state=absent"
       loop: "{{ homebrew_cask_uninstalled_apps }}"
+# 
+    # This test was successful
+    # - name: test install homebrew cask applications.
+    #   homebrew_cask:
+    #     name: brave-browser
+    #     #install_options: 'cask'
+    #     state: present
+    #     #upgrade_all: yes
 
     - name: Install configured cask applications.
-      homebrew:
-      # homebrew_cask:
+      homebrew_cask:
         name: "{{ item.name | default(item) }}"
         path: "{{ homebrew_brew_bin_path }}"
         state: present
-        install_options: "{{ item.install_options | default('appdir=' + homebrew_cask_appdir) }}"
+        install_options: "{{ item.install_options | default('cask, appdir=' + homebrew_cask_appdir) }}"
         # accept_external_apps: "{{ homebrew_cask_accept_external_apps }}"
       loop: "{{ homebrew_cask_apps }}"
       notify:

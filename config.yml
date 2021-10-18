@@ -47,7 +47,7 @@ homebrew_cask_apps:
   # - slack
   # - sublime-text
   # - transmit
-  - vagrant
+  # - vagrant
   - iterm2
   - notion
   - spotify
@@ -58,7 +58,7 @@ homebrew_cask_apps:
   - qv2ray
   # - virtualbox
   # - vmware-fusion
-  # - whatsapp
+  - whatsapp
 
 pip_install_packages:
   - name: yfinance
