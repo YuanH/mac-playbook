@@ -27,6 +27,7 @@ homebrew_installed_packages:
   - openssl
   # - pv
   - wget
+  - terraform
   # - wrk
 
 homebrew_taps:
@@ -58,7 +59,6 @@ homebrew_cask_apps:
   - qv2ray
   # - virtualbox
   # - vmware-fusion
-  - whatsapp
 
 pip_install_packages:
   - name: yfinance
@@ -86,4 +86,6 @@ pip_install_packages:
   - name: df2gspread
     state: latest
   - name: flask
+    state: latest
+  - name: selenium
     state: latest
